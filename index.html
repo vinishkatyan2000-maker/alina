@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой вишлист</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5 url("./src/фон.jpg") center / cover no-repeat fixed;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Шапка с описанием */
+        header {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            color: #555;
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Сетка карточек */
+        .wishlist {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* Карточка товара */
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-body {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-body h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .card-body .price {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        /* Кнопка-ссылка */
+        .card-body a {
+            display: inline-block;
+            margin-top: auto;
+            text-align: center;
+            padding: 10px 15px;
+            background: #0066cc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .card-body a:hover {
+            background: #0052a3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ОПИСАНИЕ -->
+        <header>
+            <h1>Мой вишлист</h1>
+            <p>
+                Что же ещё мне можно подарить, кроме вафель и пластилина?
+                  
+            </p>
+        </header>
+
+        <!-- СПИСОК ПРЕДМЕТОВ -->
+        <div class="wishlist">
+
+      <!-- ПРЕДМЕТ 1 -->
+            <div class="card">
+                <img src="./src/10.png" alt="Вафли Kinder Bueno White">
+                <div class="card-body">
+                    <h3>Цветы</h3>
+                    <p class="price">Любые, но, если интересно, мне нравятся ромашки или маленькие белые или розовые розы</p>
+                    
+                </div>
+            </div>
+            <!-- ПРЕДМЕТ 1 -->
+            <div class="card">
+                <img src="./src/2.png" alt="Вафли Kinder Bueno White">
+                <div class="card-body">
+                    <h3>Вафли Kinder Bueno White</h3>
+                    
+                    <a href="https://ozon.ru/t/CrUCSjB" target="_blank">Посмотреть</a>
+                </div>
+            </div>
+
+            <!-- ПРЕДМЕТ 2 -->
+            <div class="card">
+                <img src="./src/3.png" alt="Кофе в капсулах">
+                <div class="card-body">
+                    <h3>Кофе в капсулах</h3>
+                    <p class="price">Любой вкус</p>
+                    <a href="https://ozon.ru/t/wERoc2Z" target="_blank">Посмотреть</a>
+                </div>
+            </div>
+
+<!-- ПРЕДМЕТ 3 -->
+            <div class="card">
+                <img src="./src/5.png" alt="Чай">
+                <div class="card-body">
+                    <h3>Чай</h3>
+                    
+                    <a href="https://ozon.ru/t/ivdEsYY" target="_blank">Посмотреть</a>
+                </div>
+            </div>
+<!-- ПРЕДМЕТ 3 -->
+            <div class="card">
+                <img src="./src/9.png" alt="Чашка">
+                <div class="card-body">
+                    <h3>Чашка</h3>
+                    
+                    <a href="https://ozon.ru/t/TOZW2KU" target="_blank">Посмотреть</a>
+                </div>
+            </div>
+
+<!-- ПРЕДМЕТ 4 -->
+            <div class="card">
+                <img src="./src/4.png" alt="Название предмета 3">
+                <div class="card-body">
+                    <h3>Чулки</h3>
+                    
+                    <a href="https://ozon.ru/t/GA9frkB" target="_blank">Посмотреть</a>
+               </div>
+            </div>
+<!-- ПРЕДМЕТ 5 -->
+            <div class="card">
+                <img src="./src/7.png" alt="Название предмета 3">
+                <div class="card-body">
+                    <h3>БДСМ набор</h3>
+                    
+                    <a href="https://ozon.ru/t/fBQIhCG" target="_blank">Посмотреть</a>
+               </div>
+            </div>
+<!-- ПРЕДМЕТ 6 -->
+            <div class="card">
+                <img src="./src/8.png" alt="Название предмета 3">
+                <div class="card-body">
+                    <h3>смазОЧКА</h3>
+                    
+                    <a href="https://ozon.ru/t/7GRUkPI" target="_blank">Посмотреть</a>
+               </div>
+            </div>
+    <!-- ПРЕДМЕТ 7 -->
+<div class="card">
+    <img src="./src/пин.png" alt="Название предмета 5">
+    <div class="card-body">
+        
+        <p class="price">Голубоглазый ариец, которого не будет интересовать происхождение моей фамилии</p>
+<a href="https://ozon.ru/t/AxoBEzP" target="_blank">Посмотреть</a>
+    </div>
+</div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
